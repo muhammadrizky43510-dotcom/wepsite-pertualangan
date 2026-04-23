@@ -394,6 +394,22 @@ function initAds() {
   const social = document.createElement('script');
   social.src = 'https://pl29227312.profitablecpmratenetwork.com/14/83/a8/1483a831bc26266bccac9635a531f.js';
   document.body.appendChild(social);
+
+  // 3. Dynamic Banners (Initialize containers if present)
+  initBanner('ad-top-728', 'https://pl29227315.profitablecpmratenetwork.com/728x90/invoke.js');
+  initBanner('ad-side-300', 'https://pl29227316.profitablecpmratenetwork.com/300x250/invoke.js');
+  initBanner('ad-sky-160', 'https://pl29227317.profitablecpmratenetwork.com/160x600/invoke.js');
+  initBanner('ad-native-menu', 'https://pl29227311.profitablecpmratenetwork.com/2ba04e76519d4977a4260791da44c2ab/invoke.js');
+  initBanner('ad-info-468', 'https://pl29227318.profitablecpmratenetwork.com/468x60/invoke.js');
+}
+
+function initBanner(id, src) {
+  const container = document.getElementById(id);
+  if (!container) return;
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = src;
+  container.appendChild(s);
 }
 
 function goTo(url) {
