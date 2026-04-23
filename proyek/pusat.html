@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pusat - Dashboard utama untuk melihat statistik dan aktivitas petualangan Anda.">
+  <title>Pusat — Pertualangan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="cursor-glow"></div>
+  <div id="navbar-container"></div>
+
+  <section class="hero" style="padding-bottom:40px;">
+    <h1>Pusat Komando</h1>
+    <p>Pantau semua aktivitas dan pencapaian petualanganmu dari satu tempat.</p>
+  </section>
+
+  <section class="section">
+    <div class="grid-3">
+      <!-- Profil -->
+      <div class="glass-card reveal">
+        <div class="icon-circle">👤</div>
+        <h3>Profil Saya</h3>
+        <p style="color:var(--text-dim);margin:12px 0;font-size:14px;">Petualang sejak 2024</p>
+        <div style="display:flex;justify-content:space-between;margin-top:16px;">
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--blue-400);">12</div><div style="font-size:12px;color:var(--text-dim);">Perjalanan</div></div>
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:700;color:var(--cyan);">5</div><div style="font-size:12px;color:var(--text-dim);">Badge</div></div>
+          <div style="text-align:center;"><div style="font-size:24px;font-weight:700;color:#a78bfa;">Lv.8</div><div style="font-size:12px;color:var(--text-dim);">Level</div></div>
+        </div>
+      </div>
+
+      <!-- Statistik -->
+      <div class="glass-card reveal">
+        <div class="icon-circle">📊</div>
+        <h3>Statistik</h3>
+        <div style="margin-top:16px;">
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;"><span>Petualangan Selesai</span><span style="color:var(--blue-400);">75%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="75"></div></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:16px;"><span>Skill Bertahan</span><span style="color:var(--blue-400);">60%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="60"></div></div>
+          <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;margin-top:16px;"><span>Eksplorasi Peta</span><span style="color:var(--blue-400);">45%</span></div>
+          <div class="progress-bar"><div class="progress-fill" data-width="45"></div></div>
+        </div>
+      </div>
+
+      <!-- Notifikasi -->
+      <div class="glass-card reveal">
+        <div class="icon-circle">🔔</div>
+        <h3>Notifikasi</h3>
+        <div style="margin-top:16px;">
+          <div style="padding:10px;border-radius:8px;background:rgba(59,130,246,0.1);margin-bottom:8px;font-size:13px;border-left:3px solid var(--blue-500);">🎉 Badge baru: Penjelajah Gunung!</div>
+          <div style="padding:10px;border-radius:8px;background:rgba(34,211,238,0.1);margin-bottom:8px;font-size:13px;border-left:3px solid var(--cyan);">📍 Destinasi baru di Flores tersedia</div>
+          <div style="padding:10px;border-radius:8px;background:rgba(167,139,250,0.1);margin-bottom:8px;font-size:13px;border-left:3px solid #a78bfa;">👥 3 petualang baru bergabung</div>
+          <div style="padding:10px;border-radius:8px;background:rgba(251,191,36,0.1);font-size:13px;border-left:3px solid #fbbf24;">⭐ Rating kamu naik ke 4.8!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aktivitas Terbaru -->
+  <section class="section">
+    <h2 class="section-title reveal">Aktivitas Terbaru</h2>
+    <p class="section-sub reveal">Jejak petualanganmu minggu ini</p>
+    <div class="glass-card reveal" style="max-width:700px;margin:0 auto;">
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Mendaki Gunung Rinjani</h3>
+          <p>Berhasil mencapai puncak 3.726 mdpl — 2 hari lalu</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Diving di Bunaken</h3>
+          <p>Eksplorasi terumbu karang dan biota laut — 5 hari lalu</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Camping di Bromo</h3>
+          <p>Menikmati sunrise spektakuler — 1 minggu lalu</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
