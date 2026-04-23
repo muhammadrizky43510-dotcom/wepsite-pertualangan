@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pertualangan - Platform petualangan digital untuk menemukan sensasi dan pengalaman baru yang tak terlupakan.">
+  <title>Pertualangan — Mencari Sensasi</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="particles"></canvas>
+  <div class="cursor-glow"></div>
+
+  <div id="navbar-container"></div>
+
+  
+  <!-- HERO -->
+  <section class="hero">
+    <h1 id="typing-text"></h1>
+    <p>Temukan petualangan seru, sensasi baru, dan pengalaman tak terlupakan bersama komunitas terbaik.</p>
+    <div class="highlight">
+      <span>cerita kamu</span>
+      <span>informasi</span>
+    </div>
+    <button class="tombol-utama magnetic" onclick="goTo('menu.html')">Selanjutnya →</button>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section">
+    <h2 class="section-title reveal">Kenapa Pertualangan?</h2>
+    <p class="section-sub reveal">Kami menyediakan pengalaman terbaik untuk para pencari sensasi</p>
+    <div class="grid-3">
+      <div class="glass-card reveal">
+        <div class="icon-circle">🏔️</div>
+        <h3>Petualangan Epik</h3>
+        <p style="color:var(--text-dim);margin-top:8px;line-height:1.6;font-size:14px;">Jelajahi destinasi menakjubkan dari gunung tertinggi hingga lautan terdalam.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="icon-circle">👥</div>
+        <h3>Komunitas Solid</h3>
+        <p style="color:var(--text-dim);margin-top:8px;line-height:1.6;font-size:14px;">Bergabung dengan ribuan petualang dari seluruh Indonesia yang saling mendukung.</p>
+      </div>
+      <div class="glass-card reveal">
+        <div class="icon-circle">⚡</div>
+        <h3>Keseruan Tanpa Batas</h3>
+        <p style="color:var(--text-dim);margin-top:8px;line-height:1.6;font-size:14px;">Setiap momen adalah kesempatan untuk menciptakan kenangan yang tak terlupakan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section">
+    <div class="stats-grid reveal">
+      <div class="stat-item">
+        <div class="stat-number" data-target="1500">0</div>
+        <div class="stat-label">Petualang Aktif</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="320">0</div>
+        <div class="stat-label">Destinasi</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="98">0</div>
+        <div class="stat-label">% Kepuasan</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">Kota</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="text-align:center;">
+    <div class="glass-card reveal" style="max-width:700px;margin:0 auto;text-align:center;">
+      <h2 style="font-size:28px;margin-bottom:12px;">Siap Memulai Petualangan?</h2>
+      <p style="color:var(--text-dim);margin-bottom:24px;">Bergabung sekarang dan temukan sensasi yang belum pernah kamu rasakan.</p>
+      <button class="tombol-utama magnetic" onclick="goTo('mulai.html')">Mulai Sekarang 🚀</button>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+
+  <svg class="garis-neon" viewBox="0 0 1440 600">
+    <path d="M0,400 C300,200 900,600 1440,300" />
+    <path d="M0,450 C400,250 800,650 1440,350" />
+    <path d="M0,500 C200,300 1000,700 1440,400" />
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>

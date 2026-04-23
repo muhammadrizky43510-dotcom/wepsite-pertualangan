@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mulai petualanganmu sekarang dengan 3 langkah mudah.">
+  <title>Mulai — Pertualangan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="cursor-glow"></div>
+  <div id="navbar-container"></div>
+
+  <section class="hero" style="padding-bottom:20px;">
+    <h1>Mulai Petualangan</h1>
+    <p>Tiga langkah mudah untuk memulai pengalaman tak terlupakan.</p>
+  </section>
+
+  <section class="section" style="padding-top:20px;max-width:800px;">
+    <!-- Wizard Progress -->
+    <div class="wizard-progress reveal">
+      <div class="wizard-step active" data-step="1">
+        <div class="wizard-circle">1</div>
+        <div class="wizard-label">Pilih Jenis</div>
+        <div class="wizard-line"></div>
+      </div>
+      <div class="wizard-step" data-step="2">
+        <div class="wizard-circle">2</div>
+        <div class="wizard-label">Preferensi</div>
+        <div class="wizard-line"></div>
+      </div>
+      <div class="wizard-step" data-step="3">
+        <div class="wizard-circle">3</div>
+        <div class="wizard-label">Konfirmasi</div>
+      </div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="wizard-panel active" id="step-1">
+      <div class="glass-card">
+        <h3 style="margin-bottom:20px;">Pilih Jenis Petualangan</h3>
+        <div class="grid-2" style="gap:16px;">
+          <label class="glass-card" style="cursor:pointer;padding:20px;text-align:center;transition:all 0.3s;" onclick="selectJenis(this)">
+            <input type="radio" name="jenis" value="alam" style="display:none;">
+            <div style="font-size:36px;margin-bottom:8px;">🏔️</div>
+            <div style="font-weight:600;">Alam & Pendakian</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Gunung, hutan, air terjun</div>
+          </label>
+          <label class="glass-card" style="cursor:pointer;padding:20px;text-align:center;transition:all 0.3s;" onclick="selectJenis(this)">
+            <input type="radio" name="jenis" value="laut" style="display:none;">
+            <div style="font-size:36px;margin-bottom:8px;">🌊</div>
+            <div style="font-weight:600;">Laut & Diving</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Snorkeling, diving, island</div>
+          </label>
+          <label class="glass-card" style="cursor:pointer;padding:20px;text-align:center;transition:all 0.3s;" onclick="selectJenis(this)">
+            <input type="radio" name="jenis" value="ekstrem" style="display:none;">
+            <div style="font-size:36px;margin-bottom:8px;">⚡</div>
+            <div style="font-weight:600;">Olahraga Ekstrem</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Paragliding, rafting, climbing</div>
+          </label>
+          <label class="glass-card" style="cursor:pointer;padding:20px;text-align:center;transition:all 0.3s;" onclick="selectJenis(this)">
+            <input type="radio" name="jenis" value="budaya" style="display:none;">
+            <div style="font-size:36px;margin-bottom:8px;">🎭</div>
+            <div style="font-weight:600;">Budaya & Heritage</div>
+            <div style="font-size:12px;color:var(--text-dim);margin-top:4px;">Candi, desa adat, kuliner</div>
+          </label>
+        </div>
+        <div style="text-align:right;margin-top:24px;">
+          <button class="tombol-utama" onclick="wizardNext(2)">Selanjutnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="wizard-panel" id="step-2">
+      <div class="glass-card">
+        <h3 style="margin-bottom:20px;">Atur Preferensi</h3>
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" id="mulai-nama" placeholder="Nama kamu">
+        </div>
+        <div class="form-group">
+          <label>Jumlah Peserta</label>
+          <select id="mulai-peserta">
+            <option value="1">1 orang (Solo)</option>
+            <option value="2">2 orang (Duo)</option>
+            <option value="3-5">3-5 orang (Grup kecil)</option>
+            <option value="6+">6+ orang (Grup besar)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Level Pengalaman</label>
+          <select id="mulai-level">
+            <option value="pemula">Pemula — Baru pertama kali</option>
+            <option value="menengah">Menengah — Beberapa kali</option>
+            <option value="ahli">Ahli — Berpengalaman</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tanggal Keberangkatan</label>
+          <input type="date" id="mulai-tanggal">
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:24px;">
+          <button class="tombol-outline" onclick="wizardNext(1)">← Kembali</button>
+          <button class="tombol-utama" onclick="wizardNext(3)">Selanjutnya →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="wizard-panel" id="step-3">
+      <div class="glass-card" style="text-align:center;">
+        <div style="font-size:64px;margin-bottom:16px;">🎉</div>
+        <h3 style="font-size:24px;margin-bottom:8px;">Konfirmasi Pendaftaran</h3>
+        <p style="color:var(--text-dim);margin-bottom:24px;">Periksa kembali data kamu sebelum mendaftar.</p>
+        <div id="summary-box" style="text-align:left;background:rgba(15,23,42,0.5);border-radius:12px;padding:20px;margin-bottom:24px;border:1px solid var(--glass-border);">
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--glass-border);"><span style="color:var(--text-dim);">Jenis:</span><span id="sum-jenis">-</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--glass-border);"><span style="color:var(--text-dim);">Nama:</span><span id="sum-nama">-</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--glass-border);"><span style="color:var(--text-dim);">Peserta:</span><span id="sum-peserta">-</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--glass-border);"><span style="color:var(--text-dim);">Level:</span><span id="sum-level">-</span></div>
+          <div style="display:flex;justify-content:space-between;padding:8px 0;"><span style="color:var(--text-dim);">Tanggal:</span><span id="sum-tanggal">-</span></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;">
+          <button class="tombol-outline" onclick="wizardNext(2)">← Kembali</button>
+          <button class="tombol-utama" onclick="submitWizard()">Konfirmasi ✅</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>

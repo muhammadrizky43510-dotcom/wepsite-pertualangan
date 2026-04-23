@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Menu - Katalog petualangan seru yang bisa kamu pilih dan jelajahi.">
+  <title>Menu — Pertualangan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <div class="cursor-glow"></div>
+  <div id="navbar-container"></div>
+
+  <section class="hero" style="padding-bottom:20px;">
+    <h1>Menu Petualangan</h1>
+    <p>Pilih petualangan impianmu dari koleksi terbaik kami.</p>
+  </section>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="search-box reveal">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" placeholder="Cari petualangan...">
+    </div>
+
+    <div class="filter-tabs reveal">
+      <button class="filter-tab active" data-filter="semua">Semua</button>
+      <button class="filter-tab" data-filter="alam">🌿 Alam</button>
+      <button class="filter-tab" data-filter="ekstrem">⚡ Ekstrem</button>
+      <button class="filter-tab" data-filter="budaya">🎭 Budaya</button>
+      <button class="filter-tab" data-filter="laut">🌊 Laut</button>
+    </div>
+
+    <div class="grid-3" id="menu-grid">
+      <div class="glass-card reveal menu-item" data-kategori="alam">
+        <div style="font-size:40px;margin-bottom:12px;">🏔️</div>
+        <h3>Pendakian Rinjani</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Taklukkan puncak tertinggi kedua di Indonesia dengan pemandangan danau Segara Anak.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 4.9</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 2.5 Juta</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Rinjani berhasil! 🏔️')">Daftar</button>
+      </div>
+
+      <div class="glass-card reveal menu-item" data-kategori="laut">
+        <div style="font-size:40px;margin-bottom:12px;">🤿</div>
+        <h3>Diving Raja Ampat</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Selami keindahan bawah laut terbaik di dunia dengan terumbu karang spektakuler.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 5.0</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 8 Juta</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Raja Ampat berhasil! 🤿')">Daftar</button>
+      </div>
+
+      <div class="glass-card reveal menu-item" data-kategori="ekstrem">
+        <div style="font-size:40px;margin-bottom:12px;">🪂</div>
+        <h3>Paragliding Batu</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Terbang di atas kota Batu, Malang dengan pemandangan pegunungan yang memukau.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 4.7</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 750 Ribu</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Paragliding berhasil! 🪂')">Daftar</button>
+      </div>
+
+      <div class="glass-card reveal menu-item" data-kategori="budaya">
+        <div style="font-size:40px;margin-bottom:12px;">🏛️</div>
+        <h3>Wisata Candi Borobudur</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Jelajahi keagungan candi Buddha terbesar di dunia dan saksi sejarah peradaban Nusantara.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 4.8</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 500 Ribu</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Borobudur berhasil! 🏛️')">Daftar</button>
+      </div>
+
+      <div class="glass-card reveal menu-item" data-kategori="alam">
+        <div style="font-size:40px;margin-bottom:12px;">🌋</div>
+        <h3>Sunrise Bromo</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Saksikan matahari terbit paling ikonik di Indonesia dari puncak Penanjakan.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 4.9</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 1.2 Juta</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Bromo berhasil! 🌋')">Daftar</button>
+      </div>
+
+      <div class="glass-card reveal menu-item" data-kategori="ekstrem">
+        <div style="font-size:40px;margin-bottom:12px;">🧗</div>
+        <h3>Rock Climbing Citatah</h3>
+        <p style="color:var(--text-dim);font-size:13px;margin:8px 0;line-height:1.6;">Uji nyalimu memanjat tebing kapur alami di Bandung Barat bersama instruktur berpengalaman.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;">
+          <div class="rating">⭐ 4.6</div>
+          <span style="color:var(--cyan);font-weight:600;font-size:14px;">Rp 400 Ribu</span>
+        </div>
+        <button class="tombol-outline" style="width:100%;margin-top:16px;" onclick="alert('Pendaftaran Rock Climbing berhasil! 🧗')">Daftar</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
